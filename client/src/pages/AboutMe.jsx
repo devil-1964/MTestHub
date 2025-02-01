@@ -2,14 +2,31 @@ import React from "react";
 
 function AboutMe({ aboutme }) {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">About Me</h2>
-      <p className="text-gray-700 mb-2"><strong>Name:</strong> {aboutme.name}</p>
-      <p className="text-gray-700 mb-2"><strong>College:</strong> {aboutme.college}</p>
-      <p className="text-gray-700 mb-2"><strong>Passing Year:</strong> {aboutme.passingYear}</p>
-      <p className="text-gray-700 mb-2"><strong>Aggregate:</strong> {aboutme.aggregate}</p>
-      <p className="text-gray-700"><strong>Description:</strong> {aboutme.description}</p>
-    </div>
+    <section className="mb-16 mt-24">
+      <h2 className="text-sm font-medium text-neutral-400 mb-6">ABOUT</h2>
+      <div className="space-y-4">
+        <div className="flex flex-col gap-1">
+          <span className="text-sm text-neutral-400">Name</span>
+          <span className="text-neutral-200">{aboutme.name}</span>
+        </div>
+        <div className="flex flex-col gap-1">
+          <span className="text-sm text-neutral-400">College</span>
+          <span className="text-neutral-200">{aboutme.college}</span>
+        </div>
+        <div className="flex flex-col gap-1">
+          <span className="text-sm text-neutral-400">Passing Year</span>
+          <span className="text-neutral-200">{aboutme.passingYear}</span>
+        </div>
+        <div className="flex flex-col gap-1">
+          <span className="text-sm text-neutral-400">Aggregate</span>
+          <span className="text-neutral-200">{aboutme.aggregate}</span>
+        </div>
+        <div className="flex flex-col gap-1">
+          <span className="text-sm text-neutral-400">Description</span>
+          <span className="text-neutral-200">{aboutme.description}</span>
+        </div>
+      </div>
+    </section>
   );
 }
 

@@ -2,17 +2,23 @@ import React from "react";
 
 function AcademicBackground({ academics }) {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">Academic Background</h2>
+    <section className="mb-16">
+      <h2 className="text-sm font-medium text-neutral-400 mb-6">EDUCATION</h2>
       <div className="space-y-4">
-        <div>
-          <h3 className="text-xl font-semibold text-gray-700 mb-2">Graduation</h3>
-          <p className="text-gray-700"><strong>College:</strong> {academics.graduation.college}</p>
-          <p className="text-gray-700"><strong>Branch:</strong> {academics.graduation.branch}</p>
-          <p className="text-gray-700"><strong>CGPA:</strong> {academics.graduation.cgpa}</p>
+        <div className="flex flex-col gap-1">
+          <span className="text-sm text-neutral-400">College</span>
+          <span className="text-neutral-200">{academics.graduation.college}</span>
+        </div>
+        <div className="flex flex-col gap-1">
+          <span className="text-sm text-neutral-400">Branch</span>
+          <span className="text-neutral-200">{academics.graduation.branch}</span>
+        </div>
+        <div className="flex flex-col gap-1">
+          <span className="text-sm text-neutral-400">CGPA</span>
+          <span className="text-neutral-200">{academics.graduation.cgpa}</span>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

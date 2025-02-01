@@ -2,16 +2,19 @@ import React from "react";
 
 function Skills({ skills }) {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">Skills</h2>
-      <ul className="flex flex-wrap gap-2">
+    <section className="mb-16">
+      <h2 className="text-sm font-medium text-neutral-400 mb-6">SKILLS</h2>
+      <div className="flex flex-wrap gap-2">
         {skills.map((skill, index) => (
-          <li key={index} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+          <span
+            key={index}
+            className="px-3 py-1 bg-neutral-700 text-neutral-300 text-sm rounded hover:bg-neutral-200 transition-colors"
+          >
             {skill.name}
-          </li>
+          </span>
         ))}
-      </ul>
-    </div>
+      </div>
+    </section>
   );
 }
 

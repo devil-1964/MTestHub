@@ -30,6 +30,12 @@ const studentSchema = new mongoose.Schema({
       name: String,
     },
   ],
+  socials: [
+    {
+      social_name: String, // e.g., GitHub, LinkedIn, Source Code
+      links: String, // e.g., https://github.com/username
+    },
+  ],
 });
 
 const Student = mongoose.model("Student", studentSchema);
